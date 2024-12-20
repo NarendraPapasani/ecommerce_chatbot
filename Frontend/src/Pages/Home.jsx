@@ -64,7 +64,7 @@ const Home = () => {
         sender: "bot",
         id: Date.now() + 1,
         timestamp: new Date().toLocaleTimeString(),
-        products: respData, // Store the products in the message
+        products: respData, 
       };
       const updatedBotMessage = [...updatedMessage, botMsgData];
       setMessages(updatedBotMessage);
@@ -87,7 +87,6 @@ const Home = () => {
       <Header />
       <div className="flex-1 overflow-y-auto p-4 pb-20">
         {" "}
-        {/* Add padding-bottom here */}
         {messages.map((msg) => (
           <ChatItem key={msg.id} msg={msg} />
         ))}
